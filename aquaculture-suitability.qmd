@@ -48,7 +48,7 @@ Our function to visualize which exclusive economic zones are best-suited to mari
 
 ```{r}
 # Source our final output function
-source("aqua_fun.R")
+source("scripts/aqua_fun.R")
 
 # Visualize results for Dungeness Crabs
 aqua_fun("Dungeness Crab", 3, 19, -360, 0)
