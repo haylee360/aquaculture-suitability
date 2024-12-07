@@ -2,26 +2,37 @@
 ![aquaculture-image](https://i0.wp.com/calmatters.org/wp-content/uploads/2020/05/NOAA_Mussellonglines_02.jpg?fit=1200%2C799&ssl=1)
 Source : [Cal Matters](https://calmatters.org/environment/2020/05/california-shellfish-farming-aquaculture/)
 
-This repository houses a set of maps, tables, and figures that illustrate redlined districts across LA County and how bird biodiversity observations are tracked across districts. 
+This repository houses a function that generates a map of suitable habitats along the West Coast of the United States for potential aquaculture species. The calculation is based on the species of interest's suitable range of sea surface temperature (sst) and suitable range of depth below the sea level. The complete function is presented at the top of the document and the workflow for creating the function is explained in detail below. 
 
 ## Skills
 This analysis highlights
 
-- Working with vector data using `sf` 
-- Working with biodiversity data and socio-economic data
+- Working with vector data using `sf`
+- Working with raster data using `terra`
+- Working with census data, bathymetry data, and 
 - Vector algebra and data cleaning
 - Mapmaking, plotting, and data visualization using `tmap` and `ggplot`
 
 ## Description
 File map
 ```
-├── redlining-birds_files/
+├── aquaculture-suitability_files/
+├── data/
+│     ├── average_annual_sst_2008.tif      # Yearly sst data
+│     ├── average_annual_sst_2009.tif
+│     ├── average_annual_sst_2010.tif
+│     ├── average_annual_sst_2011.tif
+│     ├── average_annual_sst_2012.tif
+│     ├── depth.tif                        # Bathymetry data
+│     └── wc_regions_clean.shp             # Economic zone data
+├── scripts/
+│     └── aqua_fun.R                       # Aquaculture suitability function
 ├── .gitignore
 ├── README.md                         
-├── redlining-birds.Rproj
-├── redlining-birds.html
-└── redlining-birds.qmd   # Analysis quarto document                  
-         
+├── aquaculture-suitability.Rproj
+├── aquaculture-suitability.html
+└── aquaculture-suitability.qmd            # Complete analysis quarto document
+
 ```
 ## Data access
 Data in this project were pulled from  
